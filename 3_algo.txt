@@ -1,0 +1,49 @@
+Algorithm for check whether given string is keyword or not.
+
+1. Include Necessary Header Files:
+   - The code starts by including three essential header files: `iostream`, `vector`, and `string`.
+
+2. Define the main` Function:
+   - The `main` function is the entry point of the program.
+
+3. Declare Variables:
+   - `vector<string> keyWords`: A vector that stores C++ keywords.
+   
+        vector<string> keyWords = {
+            "auto", "break", "case", "char", "class", "const", "continue", "default",
+            "do", "double", "else", "enum", "extern", "float", "for", "goto",
+            "if", "int", "long", "namespace", "operator", "return", "short", "sizeof",
+            "static", "struct", "switch", "template", "this", "typedef", "union", "unsigned",
+            "void", "volatile", "while"
+        };
+        
+   - `string userKeyWord`: A string variable to store the user's input.
+   - `bool flag = true;`: A boolean variable initialized to `true` to serve as a flag for determining whether the user's input is a C++ keyword.
+
+4. Prompt User for Input:
+   - The program displays the message "Enter your keyword: " using `cout` to prompt the user to enter a keyword.
+
+5. Read User Input:
+   - The program reads the user's input using `cin` and stores it in the `userKeyWord` variable.
+
+6. Initialize Flag:
+   - `flag` is initialized to `true` to assume that the user's input is a keyword by default.
+
+7. Iterate Through Keywords:
+   - The program enters a `for` loop that iterates through the vector `keyWords` using an index `idx`.
+
+8. Check for Keyword Match:
+   - Inside the loop, it compares the current keyword in the vector (`keyWords[idx]`) with the user's input (`userKeyWord`).
+
+9. Keyword Match Found:
+    - If a match is found, it sets the `flag` to `false` to indicate that the input is a C++ keyword.
+    - It prints "It is a keyword of C++ language."
+    - The `break` statement is used to exit the loop since the keyword has been identified.
+
+10. Check Flag After Loop:
+    - After the loop, it checks the value of the `flag`:
+      - If `flag` is still `true`, it means no match was found, and it prints "It is not a keyword of C++ language."
+
+11. Return 0:
+    - Finally, the `main` function returns 0 to indicate successful program execution.
+
