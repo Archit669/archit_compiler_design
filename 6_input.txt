@@ -1,0 +1,3 @@
+hello this is a test file to count
+the whitespaces and new line character from the file.
+this is a file 6_input.txt.

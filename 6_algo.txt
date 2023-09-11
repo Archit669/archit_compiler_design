@@ -1,0 +1,14 @@
+Algorithm for the code that counts whitespace and newline characters in a file.
+
+1. Initialize counters for `whitespaceCount` and `newlineCount` to zero.
+2. Specify the filename you want to analyze (`filename`).
+3. Open the file with the provided filename (`ifstream file(filename)`).
+4. Check if the file was opened successfully. If not, display an error message and exit.
+5. Initialize a character variable `character` to store each character read from the file.
+6. Use a loop to read characters from the file until the end is reached.
+   - For each character read:
+     - If it's a space (' ') or tab ('\t'), increment `whitespaceCount`.
+     - If it's a newline character ('\n'), increment `newlineCount`.
+7. Close the file to release resources.
+8. Display the counts of whitespace and newline characters.
+9. Exit the program.

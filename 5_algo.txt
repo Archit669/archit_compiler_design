@@ -1,0 +1,10 @@
+Algorithm check if a string is a constant or not.
+
+1. Initialize a boolean variable `isConstant` to `true`.
+2. Read a string `s` from the user.
+3. Iterate through each character `c` in the string using a range-based for loop.
+   - If `c` is not a digit (use `isdigit()` function), set `isConstant` to `false` and break out of the loop.
+4. After the loop, check the value of `isConstant`.
+   - If `isConstant` is `true`, print "Given string is a constant."
+   - If `isConstant` is `false`, print "Given string is not a constant."
+
