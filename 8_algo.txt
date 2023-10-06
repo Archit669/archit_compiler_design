@@ -1,0 +1,43 @@
+Algorithm: Stack Operations using Array
+
+1. Initialize an empty stack (an array) and define its maximum size (MAX_SIZE).
+
+2. Create a class or struct to represent the stack. This class should include the following member functions:
+   - `isEmpty()`: Checks if the stack is empty.
+   - `push(item)`: Pushes an item onto the stack.
+   - `pop()`: Removes and returns the top item from the stack.
+   - `peek()`: Returns the top item without removing it from the stack.
+   - `size()`: Returns the number of items in the stack.
+
+3. Implement the member functions as follows:
+
+   a. `isEmpty()`:
+      - Check if the stack is empty by checking if the array is empty.
+
+   b. `push(item)`:
+      - Check if the stack is not full (i.e., the size is less than MAX_SIZE).
+      - Add the item to the end of the array (top of the stack).
+
+   c. `pop()`:
+      - Check if the stack is not empty.
+      - Remove and return the item from the end of the array (top of the stack).
+
+   d. `peek()`:
+      - Check if the stack is not empty.
+      - Return the item at the end of the array (top of the stack) without removing it.
+
+   e. `size()`:
+      - Return the number of items in the stack (size of the array).
+
+4. In the main program:
+   - Create an instance of the stack class.
+   - Use the member functions to perform stack operations:
+     - `push()` to add items to the stack.
+     - `pop()` to remove items from the stack.
+     - `peek()` to access the top item without removal.
+     - `isEmpty()` to check if the stack is empty.
+     - `size()` to get the size of the stack.
+
+5. Execute and test the stack operations in the main program.
+
+6. Handle edge cases such as stack overflow (pushing when the stack is full) and stack underflow (popping when the stack is empty) as needed.

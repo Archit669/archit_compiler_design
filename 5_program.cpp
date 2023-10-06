@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     string s;
+    cout << "Enter your string: ";
     cin >> s;
 
     bool isConstant = true; // Use a more descriptive variable name
