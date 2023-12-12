@@ -1,0 +1,20 @@
+Initialize: l, r, temp, tempprod, productions
+Set i, j, consumed to 0
+Set flag to 0
+
+Take user input for the production rule
+Extract LHS (l) and RHS (r)
+
+While (sscanf(r + consumed, "%[^|]s", temp) == 1 and consumed <= strlen(r)):
+    If (temp[0] == l[0]):
+        Set flag to 1
+        Create new productions by eliminating left recursion
+    Else:
+        Create new productions with a new non-terminal
+
+    Update consumed
+
+If (flag is 1):
+    Add a production for epsilon to productions
+
+Display the modified productions

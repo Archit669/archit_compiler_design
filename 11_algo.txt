@@ -1,0 +1,43 @@
+
+IRead c
+Initialize ip, op1, op2, temp
+Read n
+For i = 1 to n:
+    Read temp
+    Append temp to ip
+    If i is not equal to n:
+        Append "|" to ip
+
+Print "Production Rule: ", ip
+
+Set x = ip[3]
+For i = 1 to n:
+    If x is equal to ip[k]:
+        If ip[k + 1] is "|":
+            Append "#" to op1
+            Insert ip[0]' after ip[k] and ip[k + 1]
+            Increment k by 4
+        Else:
+            Append "|" + substring(ip, k + 1, sizes[i] - 1) to op1
+            Remove substring(ip, k - 1, sizes[i] + 1) from ip
+    Else:
+        While ip[k] is not equal to "|":
+            Increment k by 1
+
+Set y = op1[6]
+For i = 1 to n - 1:
+    If y is equal to op1[k]:
+        If op1[k + 1] is "|":
+            Append "#" to op2
+            Insert op1[0]'' after op1[k] and op1[k + 1]
+            Increment k by 5
+        Else:
+            Copy substring(op1, k + 1) to temp
+            Append "|" + temp to op2
+            Remove substring(op1, k - 1, temp.length() + 2) from op1
+
+Remove the last character from op2
+Print "After Left Factoring:"
+Print ip
+Print op1
+Print op2

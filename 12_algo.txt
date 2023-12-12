@@ -1,0 +1,64 @@
+
+Read count
+Initialize production, calc_first, first arrays
+Initialize n, k, e, jm, point1, point2, xxx
+
+For each k from 0 to count - 1:
+    Read production[k]
+
+Initialize done array
+
+For each k from 0 to count - 1:
+    Set c to production[k][0]
+    Set point2 to 0
+    Set xxx to 0
+
+    For each kay from 0 to ptr:
+        If c is equal to done[kay]:
+            Set xxx to 1
+            Break
+
+    If xxx is equal to 1:
+        Continue to the next iteration
+
+    Call findfirst function with parameters c, 0, 0
+    Increment ptr by 1
+    Set done[ptr] to c
+
+    Print "First(c) = {"
+    Add c to calc_first[point1][point2]
+    
+    For each i from jm to n - 1:
+        Set lark to 0
+        Set chk to 0
+
+        For each lark from 0 to point2 - 1:
+            If first[i] is equal to calc_first[point1][lark]:
+                Set chk to 1
+                Break
+
+        If chk is equal to 0:
+            Print first[i]
+            Add first[i] to calc_first[point1][point2]
+            Increment point2 by 1
+
+    Print "}\n"
+    Set jm to n
+    Increment point1 by 1
+
+Print "\n-----------------------------------------------\n\n"
+
+Function findfirst(c, q1, q2):
+    For each j from 0 to count - 1:
+        If production[j][0] is equal to c:
+            If production[j][2] is equal to '#':
+                If production[q1][q2] is equal to '\0':
+                    Add '#' to first
+                Else if (production[q1][q2] is not equal to '\0' and (q1 is not equal to 0 or q2 is not equal to 0)):
+                    Call findfirst with parameters production[q1][q2], q1, (q2 + 1)
+                Else:
+                    Add '#' to first
+            Else if production[j][2] is not an upper-case letter:
+                Add production[j][2] to first
+            Else:
+                Call findfirst with parameters production[j][2], j, 3
